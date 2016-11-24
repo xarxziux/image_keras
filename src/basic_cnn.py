@@ -62,5 +62,5 @@ model.fit_generator(
         validation_data=validation_generator,
         nb_val_samples=nb_validation_samples)
 
-model.save_weights('models/basic_cnn_30_epochs_231121.h5')
+model.save_weights('models/basic_cnn_30_epochs_161122.h5')
 
