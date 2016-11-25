@@ -1,0 +1,42 @@
+ERROR ATFER BASIC_CNN.PY
+------------------------
+Exception in thread Thread-31:
+Traceback (most recent call last):
+  File "/home/ubuntu/miniconda2/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/home/ubuntu/miniconda2/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/keras/engine/training.py", line 433, in data_generator_task
+    generator_output = next(generator)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/keras/preprocessing/image.py", line 605, in next
+    x = self.image_data_generator.random_transform(x)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/keras/preprocessing/image.py", line 362, in random_transform
+    fill_mode=self.fill_mode, cval=self.cval)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/keras/preprocessing/image.py", line 108, in apply_transform
+    final_offset, order=0, mode=fill_mode, cval=cval) for x_channel in x]
+AttributeError: 'NoneType' object has no attribute 'interpolation'
+
+
+ERROR ATFER AUGMENTED_CNN.PY
+----------------------------
+Exception in thread Thread-32:
+Traceback (most recent call last):
+  File "/home/ubuntu/miniconda2/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/home/ubuntu/miniconda2/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/keras/engine/training.py", line 433, in data_generator_task
+    generator_output = next(generator)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/keras/preprocessing/image.py", line 603, in next
+    img = load_img(os.path.join(self.directory, fname), grayscale=grayscale, target_size=self.target_size)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/keras/preprocessing/image.py", line 173, in load_img
+    img = Image.open(path)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/PIL/Image.py", line 2309, in open
+    im = _open_core(fp, filename, prefix)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/PIL/Image.py", line 2299, in _open_core
+    im = factory(fp, filename)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/PIL/JpegImagePlugin.py", line 743, in jpeg_factory
+    im = JpegImageFile(fp, filename)
+  File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/PIL/ImageFile.py", line 102, in __init__
+    struct.error) as v:
+AttributeError: 'NoneType' object has no attribute 'error'
