@@ -51,16 +51,16 @@ model.compile(loss='binary_crossentropy',
               optimizer='rmsprop',
               metrics=['accuracy'])
 
-nb_epoch = 30
+nb_epoch = 1
 nb_train_samples = 2048
 nb_validation_samples = 832
 
-model.fit_generator(
-        train_generator,
-        samples_per_epoch=nb_train_samples,
-        nb_epoch=nb_epoch,
-        validation_data=validation_generator,
-        nb_val_samples=nb_validation_samples)
+#model.fit_generator(
+#        train_generator,
+#        samples_per_epoch=nb_train_samples,
+#        nb_epoch=nb_epoch,
+#        validation_data=validation_generator,
+#        nb_val_samples=nb_validation_samples)
 
-model.save_weights('models/basic_cnn_30_epochs_161122.h5')
+#model.save_weights('models/basic_cnn_30_epochs_161122.h5')
 
